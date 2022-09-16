@@ -1,5 +1,5 @@
 async function getTokens(offset) {
-    const data = await fetch(`https://api.opensea.io/api/v1/assets?asset_contract_address=0x0ac066d015ca2855bbd2dcbf92f7e4d2d3f6ee92&order_direction=asc&offset=${offset}&limit=16`, {
+    const data = await fetch(`https://rinkeby-api.opensea.io/api/v1/assets?asset_contract_address=0x6c4b1e056b073Fd054A99c7ddEf82D392a16cD50&order_direction=asc&offset=${offset}&limit=16`, 
       method: "GET",
       headers: {
         Accept: "application/json",
@@ -32,7 +32,7 @@ async function getTokens(offset) {
     console.log(result);
   }
   async function getAllTokens() {
-    for (i = 0; i < 112; i += 16) {
+    for (i = 0; i < 32; i += 16) {
       await makeRequest(i);
     };
   }
