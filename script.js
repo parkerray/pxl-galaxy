@@ -4,6 +4,9 @@ async function getTokens(offset) {
       headers: {
         Accept: "application/json",
       },
+      mode: {
+        "no-cors";
+      },
     });
     const response = await data.json();
     console.log(response);
