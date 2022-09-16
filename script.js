@@ -1,11 +1,10 @@
 async function getTokens(offset) {
     const data = await fetch(`https://testnets-api.opensea.io/api/v1/assets?asset_contract_address=0x0a8267d77997a510a58c3cdcc19d9e366c9c435a&order_direction=asc&offset=${offset}&limit=16`, 
+    {
       method: "GET",
+      mode: "no-cors",
       headers: {
         Accept: "application/json",
-      },
-      mode: {
-        "no-cors";
       },
     });
     const response = await data.json();
